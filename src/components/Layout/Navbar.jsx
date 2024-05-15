@@ -4,17 +4,17 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [navStyle, setNavStyle] = useState("text-green-700");
+  const [navStyle, setNavStyle] = useState("text-gray-200");
   const router = useRouter();
   const { pathname } = router;
 
   const handleScroll = () => {
     if (window.scrollY >= 100 && window.scrollY < 500) {
-      setNavStyle(" transform -translate-y-16 ");
+      setNavStyle("transform -translate-y-16 ");
     } else if (window.scrollY > 500) {
-      setNavStyle("bg-green-700 text-white backdrop-blur-sm");
+      setNavStyle("bg-gray-200 backdrop-blur-sm");
     } else if (window.scrollY < 100) {
-      setNavStyle("text-green-700");
+      setNavStyle("text-black");
     }
   };
 
